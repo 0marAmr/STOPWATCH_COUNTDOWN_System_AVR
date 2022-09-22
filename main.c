@@ -3,10 +3,10 @@
  *  Author: Omar Amr Mahmoud Hafz
  */
 
+#include "prototypes.h"			  // F_CPU 1MHz
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
-#include "prototypes.h"
 
 bool g_tick_flag = FALSE, g_reset = FALSE;
 uint8 device_status = STOPWATCH; // device starts as stopwatch by default
@@ -266,6 +266,8 @@ void load_time(uint8 *const time_now)
 			_delay_ms(BUTTON_DELAY);
 			if (LD)
 			{
+				if (!(temp[0]) && !(temp[1]) && !(temp[2])) // user didn't input time.
+					return;
 				device_status = COUNTDOWN_TIMER;
 				for (uint8 i = 0; i < 3; i++)
 					time_now[i] = temp[i]; // copy the entered time

@@ -6,6 +6,7 @@
 #ifndef PROTOTYPES_H_
 #define PROTOTYPES_H_
 
+#define F_CPU 1000000LU					// 1MHz freq
 #define TICKS_IN_ONE_SEC 15625
 #define HR_MIN_SEC 3
 #define BUTTON_DELAY 10 				// delay time to avoid bouncing effect
