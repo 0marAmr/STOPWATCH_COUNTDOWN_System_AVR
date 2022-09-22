@@ -13,7 +13,7 @@ compile:
 	@$(COMPILE) -o $(EXECUTABLE).elf $(EXECUTABLE).o
 	@avr-objcopy -j .text -j .data -O ihex $(EXECUTABLE).elf $(EXECUTABLE).hex
 	@echo "Program Size"
-	avr-size --format=avr --mcu=$(MCU) $(EXECUTABLE).elf
+	@avr-size --format=avr --mcu=$(MCU) $(EXECUTABLE).elf
 
 clean:
 	@echo "removing compilation files.." 
