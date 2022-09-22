@@ -12,7 +12,7 @@ compile:
 	@$(COMPILE) -c $(SRC_FILE).c -o $(EXECUTABLE).o	
 	@$(COMPILE) -o $(EXECUTABLE).elf $(EXECUTABLE).o
 	@avr-objcopy -j .text -j .data -O ihex $(EXECUTABLE).elf $(EXECUTABLE).hex
-	@echo "Program Size"
+	@echo "------Program Size------"
 	@avr-size --format=avr --mcu=$(MCU) $(EXECUTABLE).elf
 
 clean:
