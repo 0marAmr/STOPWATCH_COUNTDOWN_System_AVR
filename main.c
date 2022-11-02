@@ -1,6 +1,6 @@
 /*
  *  Created on: Sep 21, 2022
- *  Author: Omar Amr Mahmoud Hafz
+ *  Author: Omar Amr Mahmoud Hafz & khalid
  */
 
 #include "prototypes.h"			  // F_CPU 1MHz
